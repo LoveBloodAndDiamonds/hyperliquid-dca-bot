@@ -8,6 +8,7 @@
 ```bash
 git clone https://github.com/LoveBloodAndDiamonds/hyperliquid-dca-bot.git
 cd hyperliquid-dca-bot
+curl -LsSf https://astral.sh/uv/install.sh | sh
 uv sync
 cp .env.dist .env       # вписать PRIVATE_KEY, опционально Telegram
 nano .env
