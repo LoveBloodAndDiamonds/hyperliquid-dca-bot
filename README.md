@@ -24,8 +24,8 @@ uv run -m app --coin=ETH --notional=25     # купить ETH на $25
 Расписание через `crontab -e`:
 
 ```cron
-0 * * * *   cd /root/hyperliquid-dca-bot && /usr/local/bin/uv run -m app --coin=BTC --amount=0.001 >> logs/cron.log 2>&1
-0 */4 * * * cd /root/hyperliquid-dca-bot && /usr/local/bin/uv run -m app --coin=ETH --notional=25  >> logs/cron.log 2>&1
+0 * * * *   cd /root/hyperliquid-dca-bot && uv run -m app --coin=BTC --amount=0.001 >> logs/cron.log 2>&1
+0 */4 * * * cd /root/hyperliquid-dca-bot && uv run -m app --coin=ETH --notional=25  >> logs/cron.log 2>&1
 ```
 
 Путь до `uv` — абсолютный (`which uv`), `cd` в директорию проекта обязателен (там лежит `.env`).
